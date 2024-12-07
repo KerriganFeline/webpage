@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fancy Website</title>
+    <!-- Import Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .menu img {
+            width: 30px; /* Smaller icon size */
+            height: 30px;
+            background: none; /* No background */
+        }
+        .message h1, .message p {
+            font-size: 24px;
+        }
+        .eyes-gif {
+            width: 100px; /* Adjust eye gif size */
+            display: block;
+            margin: 20px auto;
+        }
+        #nameInput, button {
+            display: none; /* Hide initially */
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: #000; /* Black background for textbox */
+            color: #fff;
+            font-size: 18px;
+        }
+        button {
+            cursor: pointer;
+        }
+
+        /* Animation for input box */
+        @keyframes showInput {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div> <!-- Background particles -->
+    
+    <!-- Top menu -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#home"><img src="icons/home.png" alt="Home"></a></li>
+            <li><a href="#experiments"><img src="icons/work.png" alt="Experiments"></a></li>
+            <li><a href="#publications"><img src="icons/pub.png" alt="Publications"></a></li>
+            <li><a href="#cv"><img src="icons/cv.png" alt="CV"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page Section -->
+    <section id="home" class="centered">
+        <div class="message">
+            <h1 id="animatedText"></h1> <!-- Empty initially for animation -->
+            <p id="nameRequest" style="display:none;">What's your name?</p>
+            <input type="text" id="nameInput" placeholder="Enter your name..." onkeypress="handleKeyPress(event)">
+            <button id="submitBtn" onclick="showName()">Submit</button>
+            <p id="response"></p>
+        </div>
+        <div class="double-eyes">
+            <img src="icons/eyes.gif" alt="Eyes looking around" class="eyes-gif">
+            <img src="icons/eyes.gif" alt="Eyes looking around" class="eyes-gif">
+        </div>        
+    </section>
+
+    <!-- Script for word-by-word typing and interaction -->
+    <script>
+        const sentence = "Hey stranger, seems you are not here by accident...";
+        let i = 0;
+
+        // Function for real-time typing effect
+        function typeSentence() {
+            if (i < sentence.length) {
+                document.getElementById("animatedText").innerHTML += sentence.charAt(i);
+                i++;
+                setTimeout(typeSentence, 50); // Adjust speed here
+            } else {
+                // After typing the sentence, show the name input
+                setTimeout(() => {
+                    document.getElementById("nameRequest").style.display = "block";
+                    document.getElementById("nameInput").style.display = "inline-block";
+                    document.getElementById("submitBtn").style.display = "inline-block";
+                    document.getElementById("nameInput").style.animation = "showInput 0.5s ease-in-out forwards";
+                    document.getElementById("submitBtn").style.animation = "showInput 0.5s ease-in-out forwards";
+                }, 500); // Delay before showing input field
+            }
+        }
+
+        // Call typeSentence when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            typeSentence();
+        });
+
+        // Function to handle Enter key press
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                showName();
+            }
+        }
+
+        // Function to display the entered name
+        function showName() {
+            const name = document.getElementById("nameInput").value;
+            const response = document.getElementById("response");
+
+            if (name) {
+                response.innerHTML = `Ahh, I knew your name was ${name}!`;
+            } else {
+                response.innerHTML = "Hmm, I guess I'll call you 'Mystery Guest'.";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800,
+                    },
+                },
+                color: { value: "#F8E70B" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, color: "#CC6CE7", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6 },
+            },
+        });
+    </script>
+</body>
+</html>
