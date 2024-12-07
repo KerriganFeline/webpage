@@ -1,2 +1,2 @@
 # webpage
-A professional web page created for my BDSM buisiness
+A professional web page created for my BDSM business
