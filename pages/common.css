@@ -167,7 +167,7 @@ body, html {
 
     /* SheBlueprint image */
     .sheBlueprint-image {
-        width: 150px; /* Smaller size */
+        width: 300px; /* Smaller size */
         top: 20%; /* Move it lower */
     }
 
