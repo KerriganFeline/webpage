@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     overflow: hidden;
     height: 100%;
-    background-color: #000; /* Base background color */
+    background-color: #15141a; /* Base background color */
     font-family: 'Georgia', serif;
     position: relative;
     scroll-behavior: smooth;
@@ -13,7 +13,7 @@ body, html {
 .background::before {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     width: 0; /* Initial width */
     height: 0; /* Initial height */
@@ -115,13 +115,14 @@ body, html {
     transform: translateY(-50%);
     text-align: left;
     padding: 0 10px;
+    color: white;
     overflow-wrap: break-word;
 }
 
 .title h1 {
     font-size: 3rem;
     line-height: 1.2;
-    text-shadow: 2px 2px 10px red; /* Adjust shadow for a horror effect */
+    text-shadow: 2px 2px 10px wheat; /* Adjust shadow for a horror effect */
 }
 
 /* Arrow styling */
@@ -130,7 +131,7 @@ body, html {
     margin: 20px auto 0; /* Spacing below the title */
     font-size: 2rem;
     text-align: center;
-    color: red; /* Arrow color */
+    color: white; /* Arrow color */
     text-decoration: none;
     animation: bounce 2s infinite;
     z-index: 1;
