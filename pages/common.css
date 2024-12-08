@@ -1,26 +1,28 @@
+/****************************** MAIN BODY ******************************/
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     height: 100%;
-    background-color: #15141a; /* Base background color */
+    background-color: #000000; /* Base background color */
     font-family: 'Georgia', serif;
     position: relative;
     scroll-behavior: smooth;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Full-screen net overlay with animation */
-.background::before {
+.spiderNet-image {
     content: '';
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    width: 0; /* Initial width */
-    height: 0; /* Initial height */
-    background-image: url('../icons/net.png'); /* Path to your net image */
+    width: 90vw; /* Start at 90% of viewport width */
+    height: 90vh; /* Start at 90% of viewport height */
+    background-image: url('../icons/spiderBigNet.jpg'); /* Path to your net image */
     background-size: cover;
     background-position: center;
-    opacity: 0.05; /* Adjust opacity to your liking */
+    opacity: 0.25; /* Adjust opacity to your liking */
     z-index: 0; /* Behind all other content */
     transform: translate(-50%, -50%); /* Center the element */
     animation: scaleUp 5s ease-in-out forwards; /* Animation properties */
@@ -28,82 +30,93 @@ body, html {
 
 /* Keyframes for scaling */
 @keyframes scaleUp {
-    0% {
-        width: 0;
-        height: 0;
+    from {
+        width: 90vw; /* Start at 90% */
+        height: 90vh; /* Start at 90% */
     }
-    100% {
-        width: 500px; /* Final size */
-        height: 500px; /* Final size */
+    to {
+        width: 100vw; /* Expand to 100% */
+        height: 100vh; /* Expand to 100% */
     }
 }
 
-/* Center image */
-.center-image {
+/****************************** TOOLBAR ******************************/
+/* Toolbar Container */
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0); /* Slightly visible background for better contrast */
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove padding to ensure no shift */
+    z-index: 1000;
+}
+
+/* CatFleine Top image */
+.catFeline-image {
     position: absolute;
     top: 2%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 150px; /* Adjust size as needed */
+    width: 200px;
     z-index: 1;
+    margin-bottom: 20px;
+}
+
+/* Toolbar Items Container */
+.toolbar-items {
+    display: flex;
+    gap: 30px; /* Space between items */
+    margin-left: 10px; /* Ensure items start from the very left */
+    padding-left: 0; /* Remove any padding */
+}
+
+/* Individual Toolbar Item */
+.toolbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.3s;
+    margin: 0; /* Remove any potential margin */
+}
+
+/* Toolbar Item Hover Effect */
+.toolbar-item:hover {
+    color: magenta; /* Highlight color on hover */
+}
+
+/* Icons Styling */
+.toolbar-item i {
+    font-size: 30px; /* Increased icon size */
+    margin-bottom: 5px;
+}
+
+/* Reset left margin for the toolbar container */
+.toolbar-items > .toolbar-item:first-child {
+    margin-left: 0;
+}
+
+/****************************** FIRST VIEW ******************************/
+/* Content Styling to Prevent Overlap */
+.content {
+    margin-top: 60px; /* Matches the height of the toolbar */
 }
 
 /* SheBlueprint image */
-.sheBlueprint-image {
+.sheKerrigan-image {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, 0);
     width: 500px; /* Adjust size as needed */
     z-index: 1;
-}
-
-/* Container for moving debris */
-.debris-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-/* Common styling for each debris */
-.debris {
-    position: absolute;
-    width: 30px; /* Size of the satanism image */
-    opacity: 0.6;
-    animation: debrisMove linear infinite;
-}
-
-/* Keyframes for debris movement */
-@keyframes debrisMove {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate(30vw, 20vh) rotate(90deg);
-    }
-    50% {
-        transform: translate(60vw, 40vh) rotate(180deg);
-    }
-    75% {
-        transform: translate(80vw, 60vh) rotate(270deg);
-    }
-    100% {
-        transform: translate(0, 80vh) rotate(360deg);
-    }
-}
-
-/* Individual animation durations and delays */
-.debris:nth-child(1) {
-    animation-duration: 15s;
-    animation-delay: 0s;
-}
-
-.debris:nth-child(2) {
-    animation-duration: 18s;
-    animation-delay: 2s;
 }
 
 /* Title styling */
@@ -151,7 +164,119 @@ body, html {
     }
 }
 
-/* Mobile vertical mode adjustments */
+/****************************** ABOUT ME ******************************/
+.hidden {
+    display: none;
+}
+
+#aboutMe-content {
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade Transitions */
+.fade-out {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.fade-in {
+    display: block;
+    opacity: 0;
+    transform: translateY(50%);
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Content Styling to Prevent Overlap */
+.content {
+    margin-top: 60px; /* Matches the height of the toolbar */
+}
+
+/* Typing Animation */
+.aboutMe-content {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: white; /* Ensures all text is white */
+    animation: typing 5s steps(50, end) 1 normal forwards;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    scrollbar-width: thin;
+    scrollbar-color: black;
+}
+body::-webkit-scrollbar {
+    width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Title Styling */
+.aboutMeTitle-content {
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    display: block;
+}
+
+/* Enhanced Transition Styling */
+.highlight {
+    color: rgb(255, 255, 255); /* White text for highlighted parts */
+    font-weight: bold;
+}
+
+/* Centering the Section */
+.aboutMeTyping-content {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%; /* Restricts the section width to 70% */
+    max-width: 700px;
+    border: 2px solid red;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+}
+
+/* Strap Images Styling */
+/*.strap1-image,
+.strap2-image {
+    max-width: 200px;
+    height: auto; 
+    margin: 0 20px; 
+    display: block;
+}*/
+
+
+
+
+
+
+
+/****************************** Mobile vertical mode adjustments ******************************/
 @media (max-width: 600px) and (orientation: portrait) {
     /* Background net */
     .background::before {
