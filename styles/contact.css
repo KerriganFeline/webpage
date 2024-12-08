@@ -1,0 +1,182 @@
+/****************************** MAIN BODY ******************************/
+/* Body and General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #0c0c0c; /* Pure black with subtle hints of gray */
+    font-family: 'Cinzel', serif; /* Gothic and elegant font */
+    color: #e0e0e0; /* Soft white for text */
+    scroll-behavior: smooth;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    scrollbar-width: thin;
+    scrollbar-color: black;
+}
+body::-webkit-scrollbar {
+    width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/****************************** TOOLBAR ******************************/
+/* Toolbar Container */
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    z-index: 1000;
+}
+
+/* CatFleine Top image */
+.catFeline-image {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 200px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+/* Toolbar Items Container */
+.toolbar-items {
+    display: flex;
+    gap: 30px;
+    margin-left: 10px;
+    padding-left: 0;
+}
+
+/* Individual Toolbar Item */
+.toolbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Default color */
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.3s;
+    margin: 0;
+}
+
+/* Toolbar Item Hover Effect */
+.toolbar-item:hover {
+    color: magenta;
+}
+
+/* Icons Styling */
+.toolbar-item a i {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: inherit; /* Ensure the icon inherits the color from the parent */
+    text-decoration: none; /* Remove any link underline */
+}
+
+/* Override default link color */
+.toolbar-item a {
+    color: inherit; /* Make sure the link color is inherited */
+}
+
+/* Reset left margin for the toolbar container */
+.toolbar-items > .toolbar-item:first-child {
+    margin-left: 0;
+}
+
+/****************************** LAWS CONTENT ******************************/
+/* Title and Header Styling */
+h2 {
+    color: #ffffff; /* White title */
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 200px 0 10px; /* Adjusted margin */
+    text-shadow: 3px 3px 5px #000000; /* Subtle shadow for depth */
+}
+
+/* Encouraging Message Styling */
+.encouraging-message {
+    color: magenta; /* Bloody red */
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 1px 1px 5px #900000;
+}
+
+/* Contact Form Styling */
+form {
+    width: 60%;
+    margin: 10px auto; /* Center form with top margin */
+    background-color: #1a1a1a; /* Slightly lighter background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 25px 10px crimson;
+}
+
+label {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid crimson;
+    box-shadow: 0 0 8px 2px crimson;
+}
+
+button {
+    width: 60%;
+    padding: 12px 20px;
+    margin-top: 5px;
+    background: crimson;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #b30000; /* Darker crimson */
+}

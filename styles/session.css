@@ -1,0 +1,210 @@
+/****************************** MAIN BODY ******************************/
+/* Body and General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0c0c0c; /* Pure black with subtle hints of gray */
+    font-family: 'Cinzel', serif; /* Gothic and elegant font */
+    color: #e0e0e0; /* Soft white for text */
+    scroll-behavior: smooth;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+/****************************** TOOLBAR ******************************/
+/* Toolbar Container */
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    z-index: 1000;
+}
+
+/* CatFleine Top image */
+.catFeline-image {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 200px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+/* Toolbar Items Container */
+.toolbar-items {
+    display: flex;
+    gap: 30px;
+    margin-left: 10px;
+    padding-left: 0;
+}
+
+/* Individual Toolbar Item */
+.toolbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Default color */
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.3s;
+    margin: 0;
+}
+
+/* Toolbar Item Hover Effect */
+.toolbar-item:hover {
+    color: magenta;
+}
+
+/* Icons Styling */
+.toolbar-item a i {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: inherit; /* Ensure the icon inherits the color from the parent */
+    text-decoration: none; /* Remove any link underline */
+}
+
+/* Override default link color */
+.toolbar-item a {
+    color: inherit; /* Make sure the link color is inherited */
+}
+
+/* Reset left margin for the toolbar container */
+.toolbar-items > .toolbar-item:first-child {
+    margin-left: 0;
+}
+
+/****************************** LAWS CONTENT ******************************/
+/* Title and Header Styling */
+h2 {
+    color: #ffffff; /* White title */
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 200px 0 10px; /* Add top margin to avoid overlap */
+    text-shadow: 3px 3px 5px #000000; /* Subtle shadow for depth */
+}
+
+/* Encouraging Message */
+.encouraging-message {
+    color: magenta; /* Bloody red */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px #900000;
+}
+
+/* Session Form Container */
+.session-form {
+    width: 60%;
+    margin: 10px auto; /* Center form with top margin */
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f); /* Metallic dark gradients */
+    border: 2px solid crimson; /* Blood-red border */
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px #900000; /* Bloody glow */
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.session-form:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 25px 10px crimson;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 60%; /* Centered width */
+    padding: 10px;
+    margin: 0px auto; /* Add spacing and center horizontally */
+    background: #121212;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    box-shadow: inset 0 0 5px 2px #1f1f1f;
+    display: block; /* Ensure block layout */
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid crimson;
+    box-shadow: 0 0 8px 2px crimson;
+}
+
+/* Label Styling */
+label {
+    text-align: left;
+    width: 60%; /* Matches input width */
+    margin: 0px auto 0px auto; /* Center horizontally with spacing */
+    color: white;
+    display: block; /* Block layout to stack above inputs */
+    font-size: 1.1rem;
+}
+
+/* Button Styling */
+button {
+    width: 60%;
+    padding: 12px 20px;
+    margin-top: 5px;
+    background: crimson;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #b30000; /* Darker crimson */
+}
+
+/* Center Content */
+.content {
+    text-align: center; /* Center the entire content */
+    width: 60%; /* Restrict width of the form container */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+}
+
+/* Gothic Date and Time Selector */
+.date-time-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.date-time-picker label {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px #333;
+}
+
+.date-time-picker select {
+    appearance: none; /* Removes native dropdown styling */
+    background: #121212;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+.date-time-picker select:focus {
+    border-color: crimson;
+    box-shadow: 0 0 8px 2px crimson;
+}
