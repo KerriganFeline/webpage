@@ -119,7 +119,7 @@ body, html {
 /* SheBlueprint image */
 .sheKerrigan-image {
     position: absolute;
-    top: 15%;
+    top: 3%;
     left: 50%;
     transform: translate(-50%, 0);
     width: 500px; /* Adjust size as needed */
@@ -203,7 +203,7 @@ body, html {
     }
     to {
         opacity: 1;
-        transform: translateY(25%);
+        transform: translateY(20%);
     }
 }
 
@@ -286,22 +286,58 @@ body::-webkit-scrollbar-track {
         opacity: 0.1; /* Adjust opacity */
     }
 
-    /* Center image */
+    /* Toolbar container adjustments */
+    .toolbar {
+        height: auto; /* Allow it to grow in height */
+        display: flex;
+        flex-direction: column; /* Change the direction to vertical */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Add padding for spacing */
+        width: 100%; /* Full width */
+        position: relative;
+    }
+
+    /* CatFeline image adjustments */
     .catFeline-image {
-        width: 100px; /* Smaller size */
-        top: 10%; /* Adjust position */
+        position: absolute;
+        top: 5px; /* Adjust positioning */
+        left: 50%;
+        transform: translate(-50%, 0); /* Center horizontally */
+        width: 120px; /* Adjust size for mobile */
+    }
+
+    /* Toolbar items container adjustments */
+    .toolbar-items {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 5px; /* Adjust space between items */
+        width: 100%; /* Full width */
+        margin-top: 10px; /* Add top margin to push items below the cat */
+        padding: 0; /* Remove any extra padding */
+    }
+
+    /* Individual toolbar item adjustments */
+    .toolbar-item {
+        font-size: 20x; /* Adjust font size */
+        margin: 5px 0; /* Adjust spacing between items */
+    }
+
+    /* Icon adjustments */
+    .toolbar-item a i {
+        font-size: 25px; /* Adjust icon size */
     }
 
     /* SheBlueprint image */
     .sheBlueprint-image {
-        width: 300px; /* Smaller size */
-        top: 20%; /* Move it lower */
+        width: 200px; /* Smaller size */
+        top: 0%; /* Move it lower */
     }
 
     /* Title (welcome text) */
     .title {
         position: absolute;
-        top: 75%;
+        top: 80%;
         left: 50%;
         width: 90%; /* Centered width */
         transform: translate(-50%, -50%); /* Fully centered */
