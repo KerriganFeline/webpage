@@ -149,3 +149,49 @@ body, html {
         transform: translateY(10px); /* Move downward slightly */
     }
 }
+
+/* Mobile vertical mode adjustments */
+@media (max-width: 600px) and (orientation: portrait) {
+    /* Background net */
+    .background::before {
+        width: 300px; /* Smaller size */
+        height: 300px; /* Smaller size */
+        opacity: 0.1; /* Adjust opacity */
+    }
+
+    /* Center image */
+    .center-image {
+        width: 100px; /* Smaller size */
+        top: 10%; /* Adjust position */
+    }
+
+    /* SheBlueprint image */
+    .sheBlueprint-image {
+        width: 150px; /* Smaller size */
+        top: 20%; /* Move it lower */
+    }
+
+    /* Title (welcome text) */
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%; /* Centered width */
+        transform: translate(-50%, -50%); /* Fully centered */
+        text-align: center; /* Center align the text */
+    }
+
+    .title h1 {
+        font-size: 2rem; /* Adjust font size */
+        line-height: 1.5; /* Improve readability */
+    }
+
+    /* Down arrow (fletch) */
+    .down-arrow {
+        position: absolute;
+        top: 70%; /* Below the text */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem; /* Adjust size */
+    }
+}
