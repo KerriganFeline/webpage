@@ -4,7 +4,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     background-color: #0c0c0c; /* Pure black with subtle hints of gray */
     font-family: 'Cinzel', serif; /* Gothic and elegant font */
     color: #e0e0e0; /* Soft white for text */
@@ -12,6 +11,18 @@ body, html {
     position: relative;
     align-items: center;
     justify-content: center;
+    scrollbar-width: thin;
+    scrollbar-color: black;
+}
+body::-webkit-scrollbar {
+    width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /****************************** TOOLBAR ******************************/
@@ -32,10 +43,10 @@ body, html {
 /* CatFleine Top image */
 .catFeline-image {
     position: absolute;
-    top: 2%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 200px;
+    width: 150px;
     z-index: 1;
     margin-bottom: 20px;
 }
@@ -118,11 +129,6 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.session-form:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 0 25px 10px crimson;
-}
-
 /* Input Fields */
 input, select, textarea {
     width: 60%; /* Centered width */
@@ -171,14 +177,6 @@ button {
 
 button:hover {
     background-color: #b30000; /* Darker crimson */
-}
-
-/* Center Content */
-.content {
-    text-align: center; /* Center the entire content */
-    width: 60%; /* Restrict width of the form container */
-    margin: 0 auto; /* Center horizontally */
-    padding: 20px;
 }
 
 /* Gothic Date and Time Selector */
