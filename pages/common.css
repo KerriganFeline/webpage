@@ -174,7 +174,7 @@ body, html {
     /* Title (welcome text) */
     .title {
         position: absolute;
-        top: 50%;
+        top: 75%;
         left: 50%;
         width: 90%; /* Centered width */
         transform: translate(-50%, -50%); /* Fully centered */
@@ -189,7 +189,7 @@ body, html {
     /* Down arrow (fletch) */
     .down-arrow {
         position: absolute;
-        top: 70%; /* Below the text */
+        top: 95%; /* Below the text */
         left: 50%;
         transform: translateX(-50%);
         font-size: 1.5rem; /* Adjust size */
