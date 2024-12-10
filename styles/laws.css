@@ -28,7 +28,7 @@ body::-webkit-scrollbar-track {
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
     display: flex;
     z-index: 1000;
 }
@@ -36,21 +36,30 @@ body::-webkit-scrollbar-track {
 /* Toggle Button */
 .toolbar-toggle {
     padding: 10px;
-    background-color: transparent;
+    background-color: rgb(37, 37, 37); /* Dark gray circular background */
     border: 0;
     cursor: pointer;
-    color: white;
+    color: red; /* Red bars for the icon */
     font-size: 24px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Fixed width for the circular shape */
+    height: 50px; /* Fixed height for the circular shape */
+    border-radius: 50%; /* Circular shape */
     position: absolute;
-    left: 20px;
+    left: 30px;
     top: 10px;
     transform: translate(-50%, 0);
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .toolbar-toggle:hover {
-    background-color: #555;
+    background-color: #141414; /* Slightly darker gray on hover */
+}
+
+.toolbar-toggle i {
+    color: red; /* Ensure the icon inside is red */
 }
 
 /* CatFeline Top Image */
@@ -68,16 +77,16 @@ body::-webkit-scrollbar-track {
 .toolbar-items {
     display: none; /* Initially hidden */
     flex-direction: column;
-    gap: 15px; /* Adjust as needed */
-    margin-top: 70px; /* Space below the toolbar */
+    gap: 15px;
     position: fixed;
-    left: 20px;
-    top: 10px;
-    transform: translate(-50%, 0);
+    top: 60px; /* Below the toggle button */
+    left: 10px;
     padding: 10px;
+    border-radius: 5px; /* Rounded edges for aesthetics */
+    z-index: 1000;
 }
 
-/* Show toolbar items when active */
+/* Ensure proper visibility on toggle */
 .toolbar-items.active {
     display: flex;
 }
@@ -91,22 +100,88 @@ body::-webkit-scrollbar-track {
     font-size: 20px;
     cursor: pointer;
     text-align: center;
-    transition: color 0.3s;
 }
 
 .toolbar-item:hover {
     color: magenta;
+    transform: scale(1.1);
 }
 
 .toolbar-item a i {
     font-size: 30px;
     margin-bottom: 5px;
-    color: inherit;
+    color: white;
     text-decoration: none;
 }
 
 .toolbar-item a {
     color: inherit;
+    text-decoration: none;
+}
+
+/****************************** CONTACT ******************************/
+/* Container Styles */
+#contact-menu-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Updated Button Style */
+.menu-button {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.menu-button:hover {
+    background-color: #1DA955;
+    transform: scale(1.1);
+}
+
+.menu-button:active {
+    transform: scale(0.95);
+}
+
+/* Contact Menu Style (unchanged) */
+.contact-menu {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.contact-item:hover {
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 /****************************** LAWS CONTENT ******************************/
@@ -119,6 +194,13 @@ body::-webkit-scrollbar-track {
     line-height: 1.8;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#parent-container { /* Assuming the parent container ID */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
 }
 
 /* Title Styling */
@@ -140,7 +222,7 @@ body::-webkit-scrollbar-track {
 .lawsTyping-content {
     text-align: left;
     padding: 20px;
-    width: 95%; /* Restricts the section width to 70% */
+    width: 95%;
     max-width: 700px;
     border: 2px solid red;
     background: rgba(255, 255, 255, 0.1);
@@ -170,6 +252,7 @@ body::-webkit-scrollbar-track {
         align-items: flex-start;
         gap: 5px;
         width: 100%;
+        margin-left: 5px;
         margin-top: 10px;
         padding: 0;
     }
@@ -189,7 +272,9 @@ body::-webkit-scrollbar-track {
     }
 
     #laws-content {
-        margin-top: 30%; /* Adjust for mobile layout */
+        margin-top: 30%;
         width: 80%;
+        left: 50%;
+        transform: translateX(-4%);
     }
 }
