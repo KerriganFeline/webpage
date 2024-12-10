@@ -116,18 +116,16 @@ h2 {
     text-shadow: 1px 1px 5px #900000;
 }
 
-/* Contact Form Styling */
-form {
+/* Contact Form Container */
+.contact-form {
     width: 60%;
     margin: 10px auto; /* Center form with top margin */
-    background-color: #1a1a1a; /* Slightly lighter background */
-    padding: 20px;
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f); /* Metallic dark gradients */
     border: 2px solid crimson; /* Blood-red border */
     border-radius: 15px;
     box-shadow: 0 0 15px 5px #900000; /* Bloody glow */
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
+    padding: 30px;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -138,16 +136,18 @@ label {
     color: #e0e0e0;
 }
 
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #0c0c0c;
-    color: #e0e0e0;
-    font-size: 1rem;
+/* Input and Textarea Styling */
+.contact-form input[type="text"], 
+.contact-form textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid crimson;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #ffffff;
+    box-shadow: 0 0 5px crimson;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -156,24 +156,20 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 8px 2px crimson;
 }
 
-button {
-    width: 60%;
-    padding: 12px 20px;
-    margin-top: 5px;
-    background: crimson;
+/* Submit Button Styling */
+.contact-form button {
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    color: white;
+    border-radius: 8px;
+    background: crimson;
+    color: #ffffff;
     font-size: 1.2rem;
-    font-family: 'Cinzel', serif;
-    text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    margin: 0 auto;
+    box-shadow: 0 0 10px crimson;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
+.contact-form button:hover {
     background-color: #b30000; /* Darker crimson */
 }
 

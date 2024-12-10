@@ -43,19 +43,19 @@
     <div class="content">
         <h2>Book a Session</h2>
         <p class="encouraging-message">
-            Well, well, look who finally crawled in—pathetic, submissive, and oh-so-ready to obey. <br>
-            Stop wasting time and prove you’re worthy. Make your move, now!
+            Vaya, vaya, mira quién finalmente se arrastró—patético, sumiso y tan dispuesto a obedecer. <br>
+            Deja de perder el tiempo y demuestra que eres digno. ¡Haz tu jugada, ahora!
         </p>        
 
         <!-- Session Form Container -->
         <div class="session-form">
             <!-- Date Picker -->
-            <label for="session-date">Select Date:</label>
+            <label for="session-date">Elige la Fecha:</label>
             <input type="date" id="session-date" name="session-date" required>
             <br><br>
 
             <!-- Time Picker -->
-            <label for="session-time">Select Time:</label>
+            <label for="session-time">Elige la Hora:</label>
             <select id="session-time" name="session-time" required>
                 <option value="" disabled selected>Select a time</option>
                 <option value="09:00">9:00 AM</option>
@@ -70,7 +70,7 @@
             <br><br>
 
             <!-- Done Button -->
-            <button id="done-button">Done</button>
+            <button id="done-button">Listo!</button>
         </div>
     </div>
     
@@ -80,7 +80,7 @@
             const time = document.getElementById('session-time').value;
     
             if (!date || !time) {
-                alert('Please select both a date and a time.');
+                alert('Elige una fecha y horario, cabrón!.');
                 return;
             }
     

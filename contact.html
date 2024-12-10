@@ -43,8 +43,9 @@
     <div class="content">
         <h2>Contact</h2>
         <p class="encouraging-message">
-            Ah, so you dare to reach out—pathetic, eager, and desperate for a response. <br>
-            Speak now, but know this: only words of true value and respect <br>will be deemed worthy of attention. Prove you deserve it.
+            Ah, ¿así que te atreves a acercarte, patético, ansioso y desesperado por una respuesta? <br>
+            Habla ahora, pero ten esto claro: solo las palabras de verdadero valor y respeto <br>
+            serán dignas de atención. Demuestra que lo mereces.
         </p>
                 
         <!-- Link to Font Awesome CDN in the head of your HTML -->
@@ -93,13 +94,23 @@
         </div>
 
         <!-- Contact form -->
-        <form action="mailto:shekerriganfaline@gmail.com" method="post" enctype="text/plain">
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject" name="subject" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <button type="submit">Send</button>
-        </form>
+        <div class="contact-form">
+            <!-- Contact Form -->
+            <form action="mailto:shekerriganfaline@gmail.com" method="post" enctype="text/plain">
+                <!-- Subject Field -->
+                <label for="subject">Sujeto:</label>
+                <input type="text" id="subject" name="subject" required>
+                <br><br>
+    
+                <!-- Message Field -->
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br><br>
+    
+                <!-- Send Button -->
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
 
     <!-- Include Font Awesome -->
