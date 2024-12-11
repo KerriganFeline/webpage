@@ -298,7 +298,6 @@ input:focus, select:focus, textarea:focus {
 
     /* Toolbar items container adjustments */
     .toolbar-items {
-        display: flex;
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the left */
         gap: 5px; /* Adjust space between items */
@@ -322,7 +321,7 @@ input:focus, select:focus, textarea:focus {
     }
 
     #contact-menu-container {
-        right: 7%;
+        right: 15px;
         top: 12px;
     }
 

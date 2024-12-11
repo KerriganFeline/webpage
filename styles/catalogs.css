@@ -223,7 +223,6 @@ body::-webkit-scrollbar-track {
 
     /* Toolbar items container adjustments */
     .toolbar-items {
-        display: flex;
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the left */
         gap: 5px; /* Adjust space between items */
@@ -247,7 +246,7 @@ body::-webkit-scrollbar-track {
     }
 
     #contact-menu-container {
-        right: 7%;
+        right: 15px;
         top: 12px;
     }
 }

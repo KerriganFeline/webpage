@@ -403,7 +403,6 @@ body::-webkit-scrollbar-track {
 
     /* Toolbar items container adjustments */
     .toolbar-items {
-        display: flex;
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the left */
         gap: 5px; /* Adjust space between items */
@@ -427,7 +426,7 @@ body::-webkit-scrollbar-track {
     }
 
     #contact-menu-container {
-        right: 45px;
+        right: 15px;
         top: 12px;
     }
 
@@ -459,5 +458,9 @@ body::-webkit-scrollbar-track {
         left: 50%;
         transform: translateX(-50%);
         font-size: 1.5rem; /* Adjust size */
+    }
+
+    .aboutMe-content {
+        margin: 0px auto;
     }
 }
