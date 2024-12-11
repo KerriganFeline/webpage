@@ -89,7 +89,7 @@ body::-webkit-scrollbar-track {
     left: 50%;
     width: 95vw; /* Start at 90% of viewport width */
     height: 95vh; /* Start at 90% of viewport height */
-    background-image: url('../icons/spiderBigNet.jpg'); /* Path to your net image */
+    background-image: url('../icons/spiderNet3.png'); /* Path to your net image */
     background-size: cover;
     background-position: center;
     opacity: 0.25; /* Adjust opacity to your liking */
