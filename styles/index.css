@@ -460,7 +460,14 @@ body::-webkit-scrollbar-track {
         font-size: 1.5rem; /* Adjust size */
     }
 
-    .aboutMe-content {
-        margin: 0px auto;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(5%);
+        }
     }
 }
