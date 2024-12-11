@@ -8,7 +8,23 @@
     <link rel="icon" type="image/png" href="icons/cat.png">
 </head>
 <body>
-    <div class="background">
+    <!-- Age Verification Section -->
+    <div id="age-verification" class="age-verification">
+        <div class="age-verification-container">
+            <h1>¿Tienes 18 años o más?</h1>
+            <p style="color: lightgray; font-size: 0.9em; margin-bottom: 20px;">
+                Al hacer clic en "Sí", confirmas que cumples con el requisito de edad mínima establecido por las regulaciones de la Unión Europea para acceder a contenido restringido por edad. 
+                Este sitio cumple con las directrices del RGPD (Reglamento General de Protección de Datos) para garantizar tu privacidad y seguridad. 
+                Si no tienes la edad legal, debes abandonar el sitio.
+            </p>
+            <div class="age-verification-buttons">
+                <button id="age-yes" class="yes-btn">Sí</button>
+                <button id="age-no" class="no-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="background hidden">
         <!-- Menu Toolbar -->
         <div class="toolbar">
             <!-- Cat Feline Image -->
@@ -113,6 +129,7 @@
     <script src="scripts/menu.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="scripts/ageVerification.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>   
 </body>
 </html>
