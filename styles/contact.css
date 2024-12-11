@@ -200,7 +200,7 @@ h2 {
 /* Encouraging Message Styling */
 .encouraging-message {
     width: 80%;
-    color: magenta; /* Bloody red */
+    color: red; /* Bloody red */
     font-size: 1.5rem;
     text-align: center;
     margin: auto;
