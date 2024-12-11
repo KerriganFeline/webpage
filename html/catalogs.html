@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogs</title>
+    <link rel="stylesheet" href="../styles/catalogs.css">
+</head>
+<body>
+    <!-- Menu Toolbar -->
+    <div class="toolbar">
+        <!-- Cat Feline Image -->
+        <img src="../icons/catFelineBlueprint.png" id="catFelineImage" class="catFeline-image" alt="CatFeline">
+        <!-- Toggle Icon -->
+        <button id="toggle-menu" class="toolbar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Toolbar Icons -->
+        <div class="toolbar-items" id="toolbar-items">
+            <!-- Home -->
+            <div class="toolbar-item">
+                <a href="../index.html">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+            <!-- Laws Icon -->
+            <div class="toolbar-item">
+                <a href="laws.html">
+                    <i class="fas fa-gavel"></i>
+                </a>
+            </div>
+            <!-- Contact Icon -->
+            <div class="toolbar-item">
+                <a href="contact.html">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <!-- Book Session Icon -->
+            <!-- <div class="toolbar-item">
+                <a href="session.html">
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+            </div> -->           
+        </div>
+    </div>
+
+    <!-- Contact Toolbar -->
+    <div id="contact-menu-container">
+        <!-- Contact Toggle Button -->
+        <button id="toggle-contact" class="menu-button">
+            <i class="fas fa-phone"></i>
+        </button>
+        <div id="contact-menu" class="contact-menu">
+            <!-- Phone Icon -->
+            <a href="tel:+34610679414" class="contact-item">
+                <i class="fas fa-phone"></i>
+            </a>
+            <!-- Email Icon -->
+            <a href="mailto:shekerriganfaline@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/kerriganfeline" target="_blank" class="contact-item">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Loverfans Icon -->
+            <a href="https://loverfans.com/KerriganFeline" target="_blank" class="contact-item">
+                <i class="fas fa-user-alt"></i>
+            </a>
+            <!-- Telegram Icon -->
+            <a href="http://t.me/she_feline" target="_blank" class="contact-item">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <!-- X (Twitter) Icon -->
+            <a href="https://x.com/KerriganFeline?t=StsTCpBWl-yQz9Z35e7V7g&s=09" target="_blank" class="contact-item">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Catalogs page content -->
+    <div class="content">
+        <h2>Image Catalogs</h2>
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="images/image1.jpg" alt="Image 1">
+                <p class="caption">Date: January 1, 2024</p>
+                <p class="description">Description of the image.</p>
+            </div>
+            <div class="image-item">
+                <img src="images/image2.jpg" alt="Image 2">
+                <p class="caption">Date: February 14, 2024</p>
+                <p class="description">Description of the image.</p>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <!-- Include Font Awesome -->
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/contact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

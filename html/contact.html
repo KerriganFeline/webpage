@@ -3,51 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Laws</title>
-    <link rel="stylesheet" href="styles/laws.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/contact.css">
 </head>
 <body>
-    <!-- Toolbar -->
+    <!-- Menu Toolbar -->
     <div class="toolbar">
         <!-- Cat Feline Image -->
-        <img src="icons/catFelineBlueprint.png" id="catFelineImage" class="catFeline-image" alt="CatFeline">
-
+        <img src="../icons/catFelineBlueprint.png" id="catFelineImage" class="catFeline-image" alt="CatFeline">
         <!-- Toggle Icon -->
         <button id="toggle-menu" class="toolbar-toggle">
             <i class="fas fa-bars"></i>
         </button>
-
         <!-- Toolbar Icons -->
         <div class="toolbar-items" id="toolbar-items">
-
             <!-- Home -->
             <div class="toolbar-item">
-                <a href="index.html">
+                <a href="../index.html">
                     <i class="fas fa-home"></i>
                 </a>
             </div>
-
             <!-- Laws Icon -->
             <div class="toolbar-item">
                 <a href="laws.html">
                     <i class="fas fa-gavel"></i>
                 </a>
             </div>
-
             <!-- Catalogs Icon -->
             <div class="toolbar-item">
                 <a href="catalogs.html">
                     <i class="fas fa-image"></i>
                 </a>
             </div>
-
             <!-- Contact Icon -->
             <div class="toolbar-item">
                 <a href="contact.html">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-
             <!-- Book Session Icon -->
             <!-- <div class="toolbar-item">
                 <a href="session.html">
@@ -57,7 +50,7 @@
         </div>
     </div>
 
-    <!-- Icon Section -->
+    <!-- Contact Toolbar -->
     <div id="contact-menu-container">
         <!-- Contact Toggle Button -->
         <button id="toggle-contact" class="menu-button">
@@ -89,41 +82,49 @@
                 <i class="fab fa-twitter"></i>
             </a>
         </div>
-    </div>   
+    </div>
 
-    <!-- Laws page content -->
-    <div id="laws-content">
-        <div class="lawsTyping-content">
-            <span class="lawsTitle-content">Prácticas que Disfruto</span><br><br>
-            En mis sesiones, ofrezco una amplia gama de prácticas cuidadosamente diseñadas para explorar tus límites, 
-            siempre bajo un entorno seguro y consensuado. Algunas de las dinámicas que podemos incluir son:<br><br>                
-            <ul>
-                <li><span class="highlight">Adiestramiento:</span> Domina la disciplina y entrega absoluta.</li>
-                <li><span class="highlight">Control de castidad:</span> Experimenta la completa sumisión a través del control físico y psicológico.</li>
-                <li><span class="highlight">Roleplay:</span> Adéntrate en escenarios donde la imaginación no tiene límites.</li>
-                <li><span class="highlight">Castigo físico:</span> Incluye arañazos, ballbusting, spanking y más.</li>
-                <li><span class="highlight">Humillación física y verbal:</span> Una experiencia diseñada para quienes buscan entrega total.</li>
-                <li><span class="highlight">Findom y Cash Meet:</span> La devoción a través del poder financiero.</li>
-                <li><span class="highlight">Facesitting con ropa:</span> Una experiencia única de control y dominio.</li>
-                <li><span class="highlight">Adoración de pies y calzado:</span> Un ritual de devoción y respeto.</li>
-                <li><span class="highlight">Pegging:</span> Una dinámica íntima de poder y exploración.</li>
-                <li><span class="highlight">Trampling y Spitting:</span> La fuerza y vulnerabilidad se unen en estas prácticas.</li>
-                <li><span class="highlight">Bondage:</span> Restricción y entrega total en manos expertas.</li>
-            </ul>
-            <br>
-            <span class="lawsTitle-content">Límites Claros</span><br><br>
-            Establecer límites es esencial para garantizar el bienestar de ambas partes. Mis sesiones no incluyen:<br><br>
-            
-            <ul>
-                <li>Prácticas sexuales comunes como masturbación, coito o sexo oral.</li>
-                <li>Contacto con sangre, lluvia dorada, scat o sondaje vesical.</li>
-            </ul>
+    <!-- Contact page content -->
+    <div class="content">
+        <h2>Contacto</h2>
+        <p class="encouraging-message">
+            Bueno, ¿así que te atreves a acercarte, patético y desesperado por una respuesta? <br>
+            Escribe ahora, pero ten esto claro: solo las palabras de verdadero valor y respeto
+            serán dignas de atención. Demuestra que lo mereces.
+        </p>
+
+        <style>
+            /* Hover effect for the icons */
+            .social-icon:hover {
+                background-color: transparent; /* Makes the black part disappear */
+                transform: scale(1.05);
+                box-shadow: 0 0 25px 10px magenta;
+            }
+        </style>
+        
+        <!-- Contact form -->
+        <div class="contact-form">
+            <!-- Contact Form -->
+            <form action="mailto:shekerriganfaline@gmail.com" method="post" enctype="text/plain">
+                <!-- Subject Field -->
+                <label for="subject">Sujeto:</label>
+                <input type="text" id="subject" name="subject" required>
+                <br><br>
+    
+                <!-- Message Field -->
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br><br>
+    
+                <!-- Send Button -->
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </div>
-    
+
     <!-- Include Font Awesome -->
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/contact.js"></script>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/contact.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>

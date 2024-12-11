@@ -1,14 +1,28 @@
 /****************************** MAIN BODY ******************************/
+/* Body and General Styling */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #000000; /* Base background color */
-    font-family: 'Georgia', serif;
-    position: relative;
+    background-color: #0c0c0c; /* Pure black with subtle hints of gray */
+    font-family: 'Cinzel', serif; /* Gothic and elegant font */
+    color: #e0e0e0; /* Soft white for text */
     scroll-behavior: smooth;
+    position: relative;
     align-items: center;
     justify-content: center;
+    scrollbar-width: thin;
+    scrollbar-color: black;
+}
+body::-webkit-scrollbar {
+    width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /****************************** BACKGROUND ******************************/
@@ -41,73 +55,164 @@ body, html {
     }
 }
 
+/****************************** CAT FELINE IMAGE ******************************/
+/* CatFeline Top Image */
+.catFeline-image {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center horizontally */
+    width: 150px; /* Adjust as needed */
+    z-index: 1001; /* Above the content */
+    pointer-events: none; /* To avoid interaction issues */
+}
+
 /****************************** TOOLBAR ******************************/
 /* Toolbar Container */
 .toolbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0); /* Slightly visible background for better contrast */
-    display: flex;
-    align-items: center;
-    padding: 0; /* Remove padding to ensure no shift */
+    top: 20px;
+    left: 10px;
     z-index: 1000;
 }
 
-/* CatFleine Top image */
-.catFeline-image {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 150px;
-    z-index: 1;
+/* Toggle Button */
+.toolbar-toggle {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #282929;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.toolbar-toggle:hover {
+    background-color: #141414;
+    transform: scale(1.1);
+}
+
+.toolbar-toggle:active {
+    transform: scale(0.95);
 }
 
 /* Toolbar Items Container */
 .toolbar-items {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px; /* Below the toggle button */
+    left: 2px;
+    right: 2px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure proper visibility on toggle */
+.toolbar-items.active {
     display: flex;
-    gap: 30px;
-    margin-left: 10px;
-    padding-left: 0;
 }
 
 /* Individual Toolbar Item */
 .toolbar-item {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 10px 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    color: white; /* Default color */
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    transition: color 0.3s;
-    margin: 0;
+    transition: transform 0.2s, color 0.2s;
 }
 
-/* Toolbar Item Hover Effect */
 .toolbar-item:hover {
-    color: magenta;
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
-/* Icons Styling */
 .toolbar-item a i {
     font-size: 30px;
-    margin-bottom: 5px;
-    color: inherit; /* Ensure the icon inherits the color from the parent */
-    text-decoration: none; /* Remove any link underline */
+    color: white;
+    text-decoration: none;
 }
 
-/* Override default link color */
 .toolbar-item a {
-    color: inherit; /* Make sure the link color is inherited */
+    color: inherit;
+    text-decoration: none;
 }
 
-/* Reset left margin for the toolbar container */
-.toolbar-items > .toolbar-item:first-child {
-    margin-left: 0;
+/****************************** CONTACT ******************************/
+/* Container Styles */
+#contact-menu-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Updated Button Style */
+.menu-button {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.menu-button:hover {
+    background-color: #1DA955;
+    transform: scale(1.1);
+}
+
+.menu-button:active {
+    transform: scale(0.95);
+}
+
+/* Contact Menu Style (unchanged) */
+.contact-menu {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.contact-item:hover {
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 /****************************** FIRST VIEW ******************************/
@@ -218,18 +323,6 @@ body, html {
     max-width: 100%;
     margin: 200px auto;
     text-align: center;
-    scrollbar-width: thin;
-    scrollbar-color: black;
-}
-body::-webkit-scrollbar {
-    width: 4px;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 10px;
-}
-body::-webkit-scrollbar-track {
-    background: transparent;
 }
 
 /* Title Styling */
@@ -295,6 +388,8 @@ body::-webkit-scrollbar-track {
         padding: 10px; /* Add padding for spacing */
         width: 100%; /* Full width */
         position: relative;
+        left: -2px;
+        top: 2px;
     }
 
     /* CatFeline image adjustments */
@@ -312,9 +407,12 @@ body::-webkit-scrollbar-track {
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the left */
         gap: 5px; /* Adjust space between items */
-        width: 100%; /* Full width */
+        width: 50px;
+        left: 10px;
+        right: 10px;
         margin-top: 10px; /* Add top margin to push items below the cat */
         padding: 0; /* Remove any extra padding */
+        align-items: center;
     }
 
     /* Individual toolbar item adjustments */
@@ -326,6 +424,11 @@ body::-webkit-scrollbar-track {
     /* Icon adjustments */
     .toolbar-item a i {
         font-size: 25px; /* Adjust icon size */
+    }
+
+    #contact-menu-container {
+        right: 45px;
+        top: 12px;
     }
 
     /* SheBlueprint image */
