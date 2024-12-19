@@ -348,4 +348,27 @@ body::-webkit-scrollbar-track {
         left: 50%;
         transform: translateX(-4%);
     }
+
+    #decorative-images {
+        display: flex; /* Use flexbox to align items */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: flex-start; /* Optional: Adjust vertical alignment */
+        margin: 0 auto; /* Center container in the viewport */
+    }
+
+    .left-image, .right-image {
+        margin: 100px 0; /* Add vertical spacing between images */
+        transform: rotate(0); /* Remove rotation for better mobile readability (optional) */
+    }
+
+    .left-image {
+        margin-top: 150px; /* Adjust spacing for the first image */
+        transform: rotate(10deg);
+    }
+
+    .right-image {
+        margin-top: 20px; /* Space below the first image */
+        transform: rotate(-10deg);
+    }
 }
