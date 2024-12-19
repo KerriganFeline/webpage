@@ -13,16 +13,19 @@ body, html {
     justify-content: center;
     scrollbar-width: thin;
     scrollbar-color: black;
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
+
+/* Custom scrollbar styles */
 body::-webkit-scrollbar {
-    width: 4px;
+    width: 4px; /* Thin scrollbar width */
 }
 body::-webkit-scrollbar-thumb {
     background-color: black;
-    border-radius: 10px;
+    border-radius: 10px; /* Rounded scrollbar thumb */
 }
 body::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent; /* Transparent track */
 }
 
 /****************************** CAT FELINE IMAGE ******************************/

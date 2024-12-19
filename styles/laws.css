@@ -13,16 +13,19 @@ body, html {
     justify-content: center;
     scrollbar-width: thin;
     scrollbar-color: black;
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
+
+/* Custom scrollbar styles */
 body::-webkit-scrollbar {
-    width: 4px;
+    width: 4px; /* Thin scrollbar width */
 }
 body::-webkit-scrollbar-thumb {
     background-color: black;
-    border-radius: 10px;
+    border-radius: 10px; /* Rounded scrollbar thumb */
 }
 body::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent; /* Transparent track */
 }
 
 /****************************** CAT FELINE IMAGE ******************************/
@@ -199,9 +202,9 @@ body::-webkit-scrollbar-track {
     box-sizing: border-box;
 }
 
-#parent-container { /* Assuming the parent container ID */
+#parent-container {
     display: flex;
-    justify-content: center; /* Horizontal centering */
+    justify-content: center;
 }
 
 /* Title Styling */
@@ -230,6 +233,53 @@ body::-webkit-scrollbar-track {
     color: white;
     border-radius: 8px;
     line-height: 1.8;
+}
+
+/****************************** IMAGES ******************************/
+#decorative-images {
+    position: absolute;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 0;
+}
+
+.rotated-image {
+    width: 300px;
+    height: auto;
+    transform: rotate(10deg);
+    transition: transform 0.3s ease-in-out;
+    animation: scaleUp 5s ease-in-out forwards;
+}
+
+.rotated-image:hover {
+    transform: rotate(10deg);
+}
+
+.left-image {
+    margin-left: 20px;
+    margin-top: 250px;
+    transform: rotate(-10deg);
+}
+
+.right-image {
+    margin-right: 20px;
+    margin-top: 250px;
+    transform: rotate(15deg);
+}
+
+/* Keyframes for scaling */
+@keyframes scaleUp {
+    from {
+        width: 250px; /* Start at 90% */
+        height: auto; /* Start at 90% */
+    }
+    to {
+        width: 300px; /* Expand to 100% */
+        height: auto; /* Expand to 100% */
+    }
 }
 
 /****************************** Mobile vertical mode adjustments ******************************/

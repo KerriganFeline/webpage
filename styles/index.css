@@ -13,16 +13,19 @@ body, html {
     justify-content: center;
     scrollbar-width: thin;
     scrollbar-color: black;
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
+
+/* Custom scrollbar styles */
 body::-webkit-scrollbar {
-    width: 4px;
+    width: 4px; /* Thin scrollbar width */
 }
 body::-webkit-scrollbar-thumb {
     background-color: black;
-    border-radius: 10px;
+    border-radius: 10px; /* Rounded scrollbar thumb */
 }
 body::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent; /* Transparent track */
 }
 
 /****************************** AGE VERIFICATION ******************************/
@@ -83,19 +86,15 @@ body::-webkit-scrollbar-track {
 /****************************** BACKGROUND ******************************/
 /* Full-screen net overlay with animation */
 .spiderNet-image {
-    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 95vw; /* Start at 90% of viewport width */
-    height: 95vh; /* Start at 90% of viewport height */
-    background-image: url('../icons/spiderNet3.png'); /* Path to your net image */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.25; /* Adjust opacity to your liking */
-    z-index: 0; /* Behind all other content */
-    transform: translate(-50%, -50%); /* Center the element */
-    animation: scaleUp 5s ease-in-out forwards; /* Animation properties */
+    width: 95vw; /* Initial size */
+    height: 95vh;
+    opacity: 0.25; /* Adjust opacity */
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 0; /* Ensure it's behind other content */
+    animation: scaleUp 5s ease-in-out forwards;
 }
 
 /* Keyframes for scaling */
