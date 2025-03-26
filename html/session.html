@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session</title>
+    <link rel="stylesheet" href="styles/session.css">
+</head>
+<body>
+    <!-- Toolbar -->   
+    <div class="toolbar">
+        <img src="icons/catFelineBlueprint.png" id="catFelineImage" class="catFeline-image" alt="CatFeline">
+        <div class="toolbar-items">
+            <div class="toolbar-item">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="laws.html">
+                    <i class="fas fa-gavel"></i>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="catalogs.html">
+                    <i class="fas fa-image"></i>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="contact.html">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="toolbar-item">
+                <a href="session.html">
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Page Content -->
+    <div class="content">
+        <h2>Book a Session</h2>
+        <p class="encouraging-message">
+            Vaya, vaya, mira quién finalmente se arrastró—patético, sumiso y tan dispuesto a obedecer. <br>
+            Deja de perder el tiempo y demuestra que eres digno. ¡Haz tu jugada, ahora!
+        </p>        
+
+        <!-- Session Form Container -->
+        <div class="session-form">
+            <!-- Date Picker -->
+            <label for="session-date">Elige la Fecha:</label>
+            <input type="date" id="session-date" name="session-date" required>
+            <br><br>
+
+            <!-- Time Picker -->
+            <label for="session-time">Elige la Hora:</label>
+            <select id="session-time" name="session-time" required>
+                <option value="" disabled selected>Select a time</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+            </select>
+            <br><br>
+
+            <!-- Done Button -->
+            <button id="done-button">Listo!</button>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('done-button').addEventListener('click', () => {
+            const date = document.getElementById('session-date').value;
+            const time = document.getElementById('session-time').value;
+    
+            if (!date || !time) {
+                alert('Elige una fecha y horario, cabrón!.');
+                return;
+            }
+    
+            const email = 'shekerriganfeline@gmail.com';
+            const subject = encodeURIComponent('Booking a Session');
+            const body = encodeURIComponent(`Hi,\n\nI would like to book a session on:\n\nDate: ${date}\nTime: ${time}\n\nThank you.`);
+            const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+    
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+    <!-- Include Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Emial JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS user ID
+
+        document.getElementById('done-button').addEventListener('click', () => {
+            const date = document.getElementById('session-date').value;
+            const time = document.getElementById('session-time').value;
+
+            if (!date || !time) {
+                alert('Please select both a date and a time.');
+                return;
+            }
+
+            const emailParams = {
+                to_email: 'shekerriganfeline@gmail.com',
+                date: date,
+                time: time,
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', emailParams)
+                .then(() => {
+                    alert('Session booked! Confirmation email sent.');
+                })
+                .catch((error) => {
+                    console.error('Failed to send email:', error);
+                    alert('Something went wrong, please try again.');
+                });
+        });
+    </script>
+</body>
+</html>

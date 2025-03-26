@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/contact.css">
+</head>
+<body>
+    <!-- Menu Toolbar -->
+    <div class="toolbar">
+        <!-- Cat Feline Image -->
+        <img src="../icons/catFelineBlueprint.png" id="catFelineImage" class="catFeline-image" alt="CatFeline">
+        <!-- Toggle Icon -->
+        <button id="toggle-menu" class="toolbar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Toolbar Icons -->
+        <div class="toolbar-items" id="toolbar-items">
+            <!-- Home -->
+            <div class="toolbar-item">
+                <a href="../index.html">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+            <!-- Laws Icon -->
+            <div class="toolbar-item">
+                <a href="laws.html">
+                    <i class="fas fa-gavel"></i>
+                </a>
+            </div>
+            <!-- Catalogs Icon -->
+            <div class="toolbar-item">
+                <a href="catalogs.html">
+                    <i class="fas fa-image"></i>
+                </a>
+            </div>
+            <!-- Contact Icon -->
+            <div class="toolbar-item">
+                <a href="contact.html">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <!-- Book Session Icon -->
+            <!-- <div class="toolbar-item">
+                <a href="session.html">
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+            </div> -->           
+        </div>
+    </div>
+
+    <!-- Contact Toolbar -->
+    <div id="contact-menu-container">
+        <!-- Contact Toggle Button -->
+        <button id="toggle-contact" class="menu-button">
+            <i class="fas fa-phone"></i>
+        </button>
+        <div id="contact-menu" class="contact-menu">
+            <!-- Email Icon -->
+            <a href="mailto:shekerriganfaline@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/kerriganfeline" target="_blank" class="contact-item">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Loverfans Icon -->
+            <a href="https://loverfans.com/KerriganFeline" target="_blank" class="contact-item">
+                <i class="fas fa-user-alt"></i>
+            </a>
+            <!-- Telegram Icon -->
+            <a href="http://t.me/she_feline" target="_blank" class="contact-item">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <!-- X (Twitter) Icon -->
+            <a href="https://x.com/KerriganFeline?t=StsTCpBWl-yQz9Z35e7V7g&s=09" target="_blank" class="contact-item">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact page content -->
+    <div class="content">
+        <h2>Contacto</h2>
+        <p class="encouraging-message">
+            Bueno, ¿así que te atreves a acercarte, patético y desesperado por una respuesta? <br>
+            Escribe ahora, pero ten esto claro: solo las palabras de verdadero valor y respeto
+            serán dignas de atención. Demuestra que lo mereces.
+        </p>
+
+        <style>
+            /* Hover effect for the icons */
+            .social-icon:hover {
+                background-color: transparent; /* Makes the black part disappear */
+                transform: scale(1.05);
+                box-shadow: 0 0 25px 10px magenta;
+            }
+        </style>
+        
+        <!-- Contact form -->
+        <div class="contact-form">
+            <!-- Contact Form -->
+            <form action="mailto:shekerriganfaline@gmail.com" method="post" enctype="text/plain">
+                <!-- Subject Field -->
+                <label for="subject">Sujeto:</label>
+                <input type="text" id="subject" name="subject" required>
+                <br><br>
+    
+                <!-- Message Field -->
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br><br>
+    
+                <!-- Send Button -->
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include Font Awesome -->
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/contact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
